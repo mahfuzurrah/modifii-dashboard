@@ -147,7 +147,7 @@ label {
 
 
 aside.ant-layout-sider.ant-layout-sider-dark.hide_side_navbar{
-  left: 100%;
+  left: -100%;
 }
 
 .ant-layout.hide_body_layout.css-byeoj0,
