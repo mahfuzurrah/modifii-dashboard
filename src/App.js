@@ -1,17 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LogIn from "./Pages/Login";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import MainLayout from "./Components/Layout/MainLayout";
-
+import Dashboard from "./Pages/Dashboard";
+import LogIn from "./Pages/Login";
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/to" element={<LogIn />} />
-          <Route path="/" element={<MainLayout/>} />
-          {/* </Route> */}
+          <Route path="/a" element={<LogIn />} />
+          <Route path="/b" element={<MainLayout />}>
+            <Route path="/" element={<Dashboard />} />
+          </Route>
         </Routes>
       </Router>
     </>
