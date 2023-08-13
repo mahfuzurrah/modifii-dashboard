@@ -146,25 +146,14 @@ label {
 }
 
 
-.body-layout {
-  margin-left: 250px;
+aside.ant-layout-sider.ant-layout-sider-dark.hide_side_navbar{
+  left: 100%;
 }
 
-.hideSidebar {
+.ant-layout.hide_body_layout.css-dev-only-do-not-override-byeoj0{
   margin-left: -250px;
 }
 
-.sidebar {
-  left: 0;
-}
-
-.hideSidebar {
-  left: -100%;
-}
-
-/* .ant-layout{
-  overflow: hidden !important;
-} */
 
 :where(.css-dev-only-do-not-override-fpg3f5).ant-layout {
   background: #fafafa !important;

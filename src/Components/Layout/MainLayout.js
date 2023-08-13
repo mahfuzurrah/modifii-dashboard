@@ -66,7 +66,7 @@ const MainLayout = () => {
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <Sider trigger={null} className={toggleBar ? "hideSidebar" : "sidebar"}>
+      <Sider trigger={null} className={toggleBar ? "hide_side_navbar" : "side_navbar"}>
         <div className="demo-logo-vertical logo">
           <img src={Logo} alt="Logo" className="logo" />
         </div>
@@ -136,7 +136,7 @@ const MainLayout = () => {
           </div>
         </div>
       </Sider>
-      <Layout className={toggleBar ? "hideSidebar" : "body-layout"}>
+      <Layout className={toggleBar ? "hide_body_layout" : "body_layout"}>
         <Header
           className="fixed-header"
           style={{
