@@ -4,7 +4,7 @@
     overflow: hidden !important;
 }
 
-.sidebar .side_bar_menu_list {
+.side_bar_menu_list {
     height: 95vh;
     overflow-y: auto;
     padding-bottom: 30px;
@@ -14,14 +14,14 @@
     justify-content: space-between !important;
 }
 
-.sidebar .side_bar_menu_list .ant-menu-item-icon {
-    font-size: 24px;
+.ant-menu-item-icon {
+    font-size: 24px !important;
     color: #5D6A83;
 }
 
-.collapsed-sider {
+/* .collapsed-sider {
     left: 0 !important;
-}
+} */
 
 .ant-menu-title-content {
     color: #2A313C;
