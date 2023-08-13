@@ -150,6 +150,7 @@ aside.ant-layout-sider.ant-layout-sider-dark.hide_side_navbar{
   left: 100%;
 }
 
+.ant-layout.hide_body_layout.css-byeoj0,
 .ant-layout.hide_body_layout.css-dev-only-do-not-override-byeoj0{
   margin-left: -250px;
 }
