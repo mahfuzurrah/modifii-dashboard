@@ -145,19 +145,20 @@ label {
   margin-top: 100px !important;
 }
 
-.ant-layout.body-layout.css-dev-only-do-not-override-byeoj0 {
+
+.body-layout {
   margin-left: 250px;
 }
 
-.ant-layout.hideSidebar.css-dev-only-do-not-override-byeoj0 {
+.hideSidebar {
   margin-left: -250px;
 }
 
-aside.ant-layout-sider.ant-layout-sider-dark.sidebar {
+.sidebar {
   left: 0;
 }
 
-aside.ant-layout-sider.ant-layout-sider-dark.hideSidebar {
+.hideSidebar {
   left: -100%;
 }
 
