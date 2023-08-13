@@ -1,13 +1,426 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  /* COLOR */
+  --primary-color: #feb902;
+  --secondary-color: #09a4ef;
+  --title-color: #101828;
+  --description-color: #718096;
+  --white-color: #ffffff;
+  --gray-200: #e4e7ec;
+  --border-color: #e2e8f0;
+  /* TYPOGRAPHY */
+  --body-font: "Inter", sans-serif;
+  --title-font: "Manrope", sans-serif;
+  /* Font Size */
+  --h1-font-size: 32px;
+  --h2-font-size: 24px;
+  --h3-font-size: 20px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  /* Font Weight */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-ex-bold: 800;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*========== BASE ==========*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--title-color);
+  background: #fafafa;
+}
+
+h1,
+h2,
+h3,
+ul {
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  font-family: var(--title-font);
+  color: var(--title-color);
+  font-weight: var(--font-ex-bold);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  font-family: var(--title-font);
+  color: var(--title-color);
+  font-weight: var(--font-ex-bold);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+  font-family: var(--title-font);
+  color: var(--title-color);
+  font-weight: var(--font-ex-bold);
+}
+
+p {
+  font-size: var(--normal-font-size);
+  color: var(--description-color);
+  margin: 0;
+  line-height: 1.6;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+  color: var(--description-color);
+}
+
+hr {
+  border: 1px solid var(--border-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.icons {
+  font-size: 18px;
+  color: var(--description-color);
+}
+
+.button {
+  border: none !important;
+}
+
+textarea,
+input {
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  width: 100%;
+}
+
+.form-control {
+  height: 50px;
+}
+
+.form-control::placeholder {
+  font-size: var(--normal-font-size);
+  color: #a0aec0;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: var(--font-medium);
+}
+
+/* Common css */
+
+.ant-layout-content {
+  background: #edf2f7;
+  border-radius: 24px;
+  padding: 20px 25px;
+  margin-top: 100px !important;
+}
+
+.ant-layout.body-layout.css-dev-only-do-not-override-fpg3f5 {
+  margin-left: 250px;
+}
+
+.ant-layout.hideSidebar.css-dev-only-do-not-override-fpg3f5 {
+  margin-left: -250px;
+}
+
+aside.ant-layout-sider.ant-layout-sider-dark.sidebar {
+  left: 0;
+}
+
+aside.ant-layout-sider.ant-layout-sider-dark.hideSidebar {
+  left: -100%;
+}
+
+/* .ant-layout{
+  overflow: hidden !important;
+} */
+
+:where(.css-dev-only-do-not-override-fpg3f5).ant-layout {
+  background: #fafafa !important;
+}
+
+.container-fluid {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.breadcrumb_list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb_list li {
+  list-style: none;
+  cursor: pointer;
+  line-height: normal;
+}
+
+.breadcrumb_list li.active {
+  padding: 4px 8px;
+  background: #e8edff;
+  color: var(--secondary-color);
+  border-radius: 6px;
+}
+
+.breadcrumb_list .icons {
+  font-size: 24px;
+}
+
+.btn {
+  padding: 10px 25px;
+  background: var(--primary-color);
+  color: var(--title-color);
+  transition: all 0.3s ease-in-out;
+  width: fit-content;
+  border-radius: 8px;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  font-weight: var(--font-bold);
+}
+
+.btn_s {
+  padding: 10px 25px;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color) !important;
+  transition: all 0.3s ease-in-out;
+  width: fit-content;
+  border-radius: 8px;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: var(--font-bold);
+}
+
+.btn_b {
+  background: #101828;
+  padding: 10px 16px;
+  color: var(--white-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  border-radius: 8px;
+}
+
+.btn_s .icons {
+  color: var(--primary-color);
+}
+
+.btn_s:hover,
+.btn:hover {
+  background: var(--secondary-color);
+  color: var(--white-color);
+  border: 1px solid transparent !important;
+}
+
+.btn_group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn_area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  width: auto;
+  height: 32px;
+}
+
+.section_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* +++++++++++++
+All pages css start
+++++++++++++++++ */
+
+/* =============== LogIn Page CSS ================= */
+
+.logIn_page {
+  /* padding: 20px; */
+  padding-right: 0;
+  width: 100%;
+  height: 100vh !important;
+}
+
+.logIn_page .row {
+  height: 100%;
+}
+
+.logIn_page .login_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.logIn_page .login_form .login_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logIn_page .form_area {
+  width: 430px;
+  text-align: center;
+}
+
+.logIn_page .form_area .desc {
+  font-weight: var(--font-medium);
+}
+
+.logIn_page .form_area .remember_me {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logIn_page .form_area .remember_me p {
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.logIn_page .form_area .fuP {
+  font-weight: var(--font-medium);
+  color: var(--secondary-color);
+}
+
+.logIn_page .form_area .btn {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.logIn_page .form_area .forget_area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.logIn_page .form_area .redio_input {
+  width: auto;
+}
+
+.logIn_page .login_form .lang_selector {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.logIn_page .login_form .lang_selector .icons {
+  position: absolute;
+  left: 8%;
+  z-index: 1;
+}
+
+.logIn_page .login_form .lang_selector .selector {
+  min-width: 160px;
+  border-radius: 16px;
+}
+
+.logIn_page .login_form .lang_selector .selector .css-1fdsijx-ValueContainer {
+  padding-left: 40px;
+  border-radius: 8px;
+}
+
+.password-input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-input-container .password-toggle-icon {
+  position: absolute;
+  right: 20px;
+  color: var(--description-color);
+}
+
+.logIn_page .logIn_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.logIn_page .login_img {
+  width: 100%;
+  height: 100%;
+  background: #edf2f7;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logIn_page .login_img img {
+  margin: auto;
+}
+
+.css-hlgwow {
+  padding-left: 40px !important;
+}
+
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
