@@ -16,7 +16,7 @@
 
 .ant-menu-item-icon {
     font-size: 24px !important;
-    color: #5D6A83;
+    color: #5d6a83;
 }
 
 /* .collapsed-sider {
@@ -24,7 +24,7 @@
 } */
 
 .ant-menu-title-content {
-    color: #2A313C;
+    color: #2a313c;
 }
 
 .sidebar_top {
@@ -37,7 +37,7 @@
 
 .ant-layout-sider {
     min-width: 250px !important;
-    background: #FAFAFA !important;
+    background: #fafafa !important;
     padding: 16px;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .ant-menu .ant-menu-item {
-    color: #2A313C;
+    color: #2a313c;
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
 }
@@ -113,7 +113,7 @@
     font-size: 24px;
 }
 
-.fixed-header{
+.fixed-header {
     position: fixed !important;
     top: 0;
     width: 100%;
@@ -121,11 +121,10 @@
     z-index: 100;
 }
 
-
 .ant-layout-header {
     background: var(--white-color);
     border-radius: 16px;
-    border: 1px solid #CBD5E0;
+    border: 1px solid #cbd5e0;
     display: flex;
     align-items: center;
     margin: 10px;
@@ -161,7 +160,7 @@
 
 .top_nav_sell_btn {
     padding: 4px 8px;
-    background: #1A202C;
+    background: #1a202c;
     color: var(--white-color);
     display: flex;
     align-items: center;

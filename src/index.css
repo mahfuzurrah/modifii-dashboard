@@ -136,6 +136,10 @@ label {
   font-weight: var(--font-medium);
 }
 
+.card {
+  border: none;
+}
+
 /* Common css */
 
 .ant-layout-content {
@@ -146,12 +150,12 @@ label {
 }
 
 
-aside.ant-layout-sider.ant-layout-sider-dark.hide_side_navbar{
+aside.ant-layout-sider.ant-layout-sider-dark.hide_side_navbar {
   left: -100%;
 }
 
 .ant-layout.hide_body_layout.css-byeoj0,
-.ant-layout.hide_body_layout.css-dev-only-do-not-override-byeoj0{
+.ant-layout.hide_body_layout.css-dev-only-do-not-override-byeoj0 {
   margin-left: -250px;
 }
 
@@ -190,7 +194,7 @@ aside.ant-layout-sider.ant-layout-sider-dark.hide_side_navbar{
 }
 
 .btn {
-  padding: 10px 25px;
+  padding: 12px 25px;
   background: var(--primary-color);
   color: var(--title-color);
   transition: all 0.3s ease-in-out;
@@ -203,7 +207,7 @@ aside.ant-layout-sider.ant-layout-sider-dark.hide_side_navbar{
 }
 
 .btn_s {
-  padding: 10px 25px;
+  padding: 12px 25px;
   color: var(--primary-color);
   border: 1px solid var(--primary-color) !important;
   transition: all 0.3s ease-in-out;
@@ -221,15 +225,28 @@ aside.ant-layout-sider.ant-layout-sider-dark.hide_side_navbar{
 
 .btn_b {
   background: #101828;
-  padding: 10px 16px;
+  padding: 12px 16px;
   color: var(--white-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+}
+
+.btn_b .icons {
+  color: var(--white-color);
 }
 
 .btn_s .icons {
   color: var(--primary-color);
+}
+
+.btn_b:hover {
+  background: var(--secondary-color);
+  color: var(--white-color);
 }
 
 .btn_s:hover,
@@ -262,6 +279,10 @@ aside.ant-layout-sider.ant-layout-sider-dark.hide_side_navbar{
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+}
+
+.section_title .text_area p {
+  margin-top: 10px;
 }
 
 /* +++++++++++++
@@ -401,6 +422,130 @@ All pages css start
 .css-hlgwow {
   padding-left: 40px !important;
 }
+
+/* =====================Dashboard====================== */
+.dashboard_page .date_picker {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.ant-picker-input input {
+  font-size: var(--normal-font-size);
+  font-weight: 700;
+}
+
+.ant-picker-input input::placeholder {
+  font-size: var(--normal-font-size);
+  font-weight: 700;
+  color: #6f767e;
+}
+
+.ant-picker-input span.ant-picker-suffix {
+  color: #1a202c;
+}
+
+.dashboard_page .all_card_group {
+  margin-top: 32px;
+  padding: 20px;
+  background: var(--white-color);
+  border-radius: 16px;
+}
+
+.dashboard_page .all_card_group .card {
+  border-radius: 12px;
+  background: #B5E4CA40;
+  padding: 16px;
+}
+
+.dashboard_page .all_card_group .card .card_icons {
+  margin-bottom: 20px;
+  width: 50px;
+  height: 50px;
+  background: #1A1D1F;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard_page .all_card_group .card .card_icons svg {
+  font-size: 20px;
+  color: var(--white-color);
+}
+
+.dashboard_page .all_card_group .card .card-body h1 {
+  margin: 5px 0;
+}
+
+.dashboard_page .all_card_group .card .card-body .card_sm_title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dashboard_page .all_card_group .card .card-body p {
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  color: var(--title-color);
+}
+
+.dashboard_page .all_card_group .card .card-body .card_status_text p {
+  display: flex;
+  align-items: center;
+  background: var(--white-color);
+  width: max-content;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+
+.dashboard_page .all_card_group .card .card-body .card_status_text .up {
+  color: #83BF6E;
+}
+
+.dashboard_page .all_card_group .card .card-body .card_status_text .down {
+  color: #FF6A55;
+}
+
+.dashboard_page .all_card_group .row {
+  row-gap: 20px;
+}
+
+
+.dashboard_page .all_card_group .d_card_1 {
+  background: #B5E4CA40;
+}
+
+.dashboard_page .all_card_group .d_card_2 {
+  background: #BDFFD040;
+}
+
+.dashboard_page .all_card_group .d_card_3 {
+  background: #BDFFD040;
+}
+
+.dashboard_page .all_card_group .d_card_4 {
+  background: #FCE2B140;
+}
+
+.dashboard_page .all_card_group .d_card_5 {
+  background: #DDE4B540;
+}
+
+.dashboard_page .all_card_group .d_card_6 {
+  background: #FCB1EC40;
+}
+
+.dashboard_page .all_card_group .d_card_7 {
+  background: #CABDFF40;
+}
+
+.dashboard_page .all_card_group .d_card_8 {
+  background: #FCB1B140;
+}
+
 
 /* =============== LogIn Page CSS ================= */
 /* =============== LogIn Page CSS ================= */
