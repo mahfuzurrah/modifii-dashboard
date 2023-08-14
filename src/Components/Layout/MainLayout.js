@@ -1,21 +1,19 @@
 import { Button, Layout, Menu, Progress, Space } from "antd";
 import React, { useState } from "react";
+import { BiMenu, BiX } from "react-icons/bi";
 import { FiBarChart, FiChevronDown, FiSettings, FiUsers } from "react-icons/fi";
 import { HiOutlineDownload, HiOutlineUser } from "react-icons/hi";
-import { BiMenu, BiX } from "react-icons/bi";
 import { Link, Outlet, useNavigate } from "react-router-dom";
+import Search from "../InputField/Search";
 import Logo from "../assets/Icons/Logo.svg";
 import UserImg from "../assets/Images/Avatar/user.png";
 import "./Navbar.css";
 import Topbar from "./Topbar";
-import Search from "../InputField/Search";
 
 const { Header, Sider, Content } = Layout;
 
 const MainLayout = () => {
   const navigate = useNavigate();
-  const [toggleBar, setToggleBar] = useState(false);
-  const [activeItem, setActiveItem] = useState(null);
 
   const mainMenuItems = [
     {
@@ -61,26 +59,33 @@ const MainLayout = () => {
     },
   ];
 
+  const [toggleBar, setToggleBar] = useState(false);
+  const [activeItem, setActiveItem] = useState(false);
+
   const handleMenuItemClick = (itemKey) => {
-    setActiveItem(itemKey); // Update the activeItem state
+    setActiveItem(itemKey);
     navigate(`/${itemKey}`);
   };
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <Sider trigger={null} className={toggleBar ? "hide_side_navbar" : "side_navbar"}>
+      <Sider
+        trigger={null}
+        className={toggleBar ? "hide_side_navbar" : "side_navbar"}
+      >
         <div className="demo-logo-vertical logo">
           <img src={Logo} alt="Logo" className="logo" />
         </div>
         <div className="side_bar_menu_list">
           <div className="sidebar_top">
-            <Search/>
+            <Search />
             <Menu theme="dark" mode="inline" selectedKeys={[activeItem]}>
               {mainMenuItems.map((menuItem) => (
                 <Menu.Item
                   key={menuItem.key}
                   icon={menuItem.icon}
                   onClick={() => handleMenuItemClick(menuItem.key)}
+                  className={activeItem === menuItem.key ? "active" : ""}
                 >
                   {menuItem.label}
                 </Menu.Item>
