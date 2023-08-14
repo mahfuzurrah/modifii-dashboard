@@ -2,15 +2,24 @@ import React from "react";
 import {
   BsArrowDown,
   BsArrowUp,
-  BsCart3,
   BsInfoCircleFill,
 } from "react-icons/bs";
+
+
+import Shop from "../assets/Icons/shop.svg"
+import Net from "../assets/Icons/net.svg"
+import Document from "../assets/Icons/Document.svg"
+import Swap from "../assets/Icons/ArrowSwap.svg"
+import Money from "../assets/Icons/money.svg"
+import ISquare from "../assets/Icons/InformationSquare.svg"
+import Refresh from "../assets/Icons/Refresh.svg"
+import CSend from "../assets/Icons/card-send.svg"
 import Card from "./Card";
 
 const DashboardCard = () => {
   const cardData = [
     {
-      icon: <BsCart3 />,
+      icon: Shop,
       title: (
         <div className="card_sm_title">
           <p>Total Sales</p>
@@ -32,7 +41,7 @@ const DashboardCard = () => {
       cName: "d_card_1",
     },
     {
-      icon: <BsCart3 />,
+      icon: Net,
       title: (
         <div className="card_sm_title">
           <p>Net</p>
@@ -54,14 +63,14 @@ const DashboardCard = () => {
       cName: "d_card_2",
     },
     {
-      icon: <BsCart3 />,
+      icon: Document,
       title: (
         <div className="card_sm_title">
-          <p>Total Sales</p>
+          <p>Invoice Due</p>
           <BsInfoCircleFill />
         </div>
       ),
-      valu: "$128k",
+      valu: "$64k",
       status: (
         <div className="card_status_text">
           <p>
@@ -76,18 +85,18 @@ const DashboardCard = () => {
       cName: "d_card_3",
     },
     {
-      icon: <BsCart3 />,
+      icon: Swap,
       title: (
         <div className="card_sm_title">
-          <p>Total Sales</p>
+          <p>Total Sell Return</p>
           <BsInfoCircleFill />
         </div>
       ),
-      valu: "$128k",
+      valu: "$512k",
       status: (
         <div className="card_status_text">
           <p>
-            <span className="up">
+            <span className="down">
               <BsArrowUp />
               35.00%
             </span>
@@ -98,10 +107,10 @@ const DashboardCard = () => {
       cName: "d_card_4",
     },
     {
-      icon: <BsCart3 />,
+      icon: Money,
       title: (
         <div className="card_sm_title">
-          <p>Total Sales</p>
+          <p>Total Purchase</p>
           <BsInfoCircleFill />
         </div>
       ),
@@ -120,18 +129,18 @@ const DashboardCard = () => {
       cName: "d_card_5",
     },
     {
-      icon: <BsCart3 />,
+      icon: ISquare,
       title: (
         <div className="card_sm_title">
-          <p>Total Sales</p>
+          <p>Purchase Due</p>
           <BsInfoCircleFill />
         </div>
       ),
-      valu: "$128k",
+      valu: "$512k",
       status: (
         <div className="card_status_text">
           <p>
-            <span className="up">
+            <span className="down">
               <BsArrowUp />
               35.00%
             </span>
@@ -142,14 +151,14 @@ const DashboardCard = () => {
       cName: "d_card_6",
     },
     {
-      icon: <BsCart3 />,
+      icon: Refresh,
       title: (
         <div className="card_sm_title">
-          <p>Total Sales</p>
+          <p>Toral Purchase Return</p>
           <BsInfoCircleFill />
         </div>
       ),
-      valu: "$128k",
+      valu: "$64k",
       status: (
         <div className="card_status_text">
           <p>
@@ -164,18 +173,18 @@ const DashboardCard = () => {
       cName: "d_card_7",
     },
     {
-      icon: <BsCart3 />,
+      icon: CSend,
       title: (
         <div className="card_sm_title">
-          <p>Total Sales</p>
+          <p>Expense</p>
           <BsInfoCircleFill />
         </div>
       ),
-      valu: "$128k",
+      valu: "$452k",
       status: (
         <div className="card_status_text">
           <p>
-            <span className="up">
+            <span className="down">
               <BsArrowUp />
               35.00%
             </span>

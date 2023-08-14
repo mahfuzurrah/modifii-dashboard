@@ -2,11 +2,13 @@ import { Button, Layout, Menu, Progress, Space } from "antd";
 import React, { useState } from "react";
 import { FiBarChart, FiChevronDown, FiSettings, FiUsers } from "react-icons/fi";
 import { HiOutlineDownload, HiOutlineUser } from "react-icons/hi";
+import { BiMenu, BiX } from "react-icons/bi";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import Logo from "../assets/Icons/Logo.svg";
 import UserImg from "../assets/Images/Avatar/user.png";
 import "./Navbar.css";
 import Topbar from "./Topbar";
+import Search from "../InputField/Search";
 
 const { Header, Sider, Content } = Layout;
 
@@ -72,6 +74,7 @@ const MainLayout = () => {
         </div>
         <div className="side_bar_menu_list">
           <div className="sidebar_top">
+            <Search/>
             <Menu theme="dark" mode="inline" selectedKeys={[activeItem]}>
               {mainMenuItems.map((menuItem) => (
                 <Menu.Item
@@ -149,9 +152,9 @@ const MainLayout = () => {
             className="header_toggle_btn"
             icon={
               toggleBar ? (
-                <FiBarChart className="icons" />
+                <BiX className="icons" />
               ) : (
-                <FiBarChart className="icons" />
+                <BiMenu className="icons" />
               )
             }
             onClick={() => setToggleBar(!toggleBar)}

@@ -43,7 +43,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--title-color);
-  background: #fafafa;
+  background: #FAFAFA;
 }
 
 h1,
@@ -146,12 +146,12 @@ label {
   background: #edf2f7;
   border-radius: 24px;
   padding: 20px 25px;
-  margin-top: 100px !important;
+  margin-top: 12px !important;
 }
 
 
-:where(.css-dev-only-do-not-override-fpg3f5).ant-layout {
-  background: #fafafa !important;
+.ant-layout {
+  background: #FAFAFA !important;
 }
 
 .container-fluid {
@@ -257,11 +257,12 @@ label {
   display: flex;
   align-items: center;
   gap: 20px;
+  width: 100%;
 }
 
 .logo {
   width: auto;
-  height: 32px;
+  height: 25px;
 }
 
 .section_title {
@@ -269,10 +270,25 @@ label {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .section_title .text_area p {
   margin-top: 10px;
+}
+
+.search_bar {
+  margin-bottom: 18px;
+}
+
+.search_bar .icons {
+  color: #718096;
+}
+
+.body_content {
+  margin-left: 0 !important;
+  margin-right: 10px !important;
 }
 
 /* +++++++++++++
@@ -422,15 +438,21 @@ All pages css start
   font-weight: 700;
 }
 
+.dashboard_page .section_title .text_area h1 {
+  font-size: 30px;
+  font-family: var(--body-font);
+  font-weight: 600;
+}
+
 .ant-picker-input input {
   font-size: var(--normal-font-size);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .ant-picker-input input::placeholder {
   font-size: var(--normal-font-size);
-  font-weight: 700;
-  color: #6f767e;
+  font-weight: 600;
+  color: #6f767e !important;
 }
 
 .ant-picker-input span.ant-picker-suffix {
@@ -550,3 +572,15 @@ All pages css start
 /* =============== LogIn Page CSS ================= */
 /* =============== LogIn Page CSS ================= */
 /* =============== LogIn Page CSS ================= */
+
+@media screen and (max-width: 768px) {
+
+  .ant-picker.date_picker,
+  .btn_area button.btn_b {
+    width: 100% !important;
+  }
+
+  .btn_area button.btn_b {
+    justify-content: center;
+  }
+}

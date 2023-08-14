@@ -29,6 +29,7 @@
 
 .sidebar_top {
     margin-top: 42px;
+    width: 100%;
 }
 
 .side_bar_menu_list hr {
@@ -114,11 +115,10 @@
 }
 
 .fixed-header {
-    position: fixed !important;
+    position: sticky !important;
     top: 0;
-    width: 100%;
-    width: -webkit-fill-available;
     z-index: 100;
+    margin-left: 0 !important;
 }
 
 .ant-layout-header {
@@ -136,6 +136,7 @@
     justify-content: space-between !important;
     gap: 30px;
     width: 100%;
+    padding-left: 20px;
     padding-right: 20px;
 }
 
@@ -143,7 +144,7 @@
 .top_nav_icon_list {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 24px;
 }
 
 .top_nav_icon_list .icons {
@@ -151,11 +152,15 @@
 }
 
 .header_toggle_btn {
-    margin-left: 20px;
+    margin-left: 8px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
+    min-width: 50px;
+    min-height: 50px;
+    background: #0000001a;
 }
 
 .top_nav_sell_btn {
@@ -175,7 +180,8 @@
 }
 
 .header_toggle_btn .icons {
-    font-size: 24px !important;
+    font-size: 30px !important;
+    color: var(--title-color)
 }
 
 .header_toggle_btn:hover {
@@ -191,17 +197,56 @@
 
 aside.ant-layout-sider.ant-layout-sider-dark {
     position: fixed;
+    background: #FAFAFA !important;
+    padding-top: 30px;
 }
 
-aside.ant-layout-sider.ant-layout-sider-dark.hide_side_navbar {
-    left: -100%;
+
+li.ant-menu-item {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
+
+li.ant-menu-item.ant-menu-item-active {
+    background: #febb0250 !important;
+}
+
+li.ant-menu-item.ant-menu-item-active .ant-menu-item-icon {
+    color: #1A202C;
+}
+
+li.ant-menu-item.ant-menu-item-selected {
+    padding-left: 10px !important;
+    background: var(--primary-color)
+}
+
 
 .body_layout {
     margin-left: 250px;
 }
 
-.ant-layout.hide_body_layout.css-byeoj0,
-.ant-layout.hide_body_layout.css-dev-only-do-not-override-byeoj0 {
-    margin-left: 0;
+@media screen and (max-width: 1250px) {
+    .header_toggle_btn {
+        display: block;
+    }
+
+    .body_layout {
+        margin-left: 10px;
+    }
+
+    .ant-layout.hide_body_layout.css-byeoj0,
+    .ant-layout.hide_body_layout.css-dev-only-do-not-override-byeoj0 {
+        margin-left: 250px;
+    }
+
+    aside.ant-layout-sider {
+        left: -100%;
+    }
+
+    aside.ant-layout-sider.ant-layout-sider-dark.hide_side_navbar {
+        left: 0;
+    }
 }

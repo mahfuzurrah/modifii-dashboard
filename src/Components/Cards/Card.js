@@ -5,7 +5,9 @@ const Card = ({ icon, title, Ticon, valu, status, Sicon, cName }) => {
     <div className="dashboard_card">
       <div className={`card ${cName}`}>
         <div className="card-body">
-          <div className="card_icons">{icon}</div>
+          <div className="card_icons">
+            <img src={icon} alt="" />
+          </div>
           <p>{title}</p>
           <h1>{valu}</h1>
           <p className="status">{status}</p>
