@@ -85,7 +85,6 @@ const MainLayout = () => {
                   key={menuItem.key}
                   icon={menuItem.icon}
                   onClick={() => handleMenuItemClick(menuItem.key)}
-                  className={activeItem === menuItem.key ? "active" : ""}
                 >
                   {menuItem.label}
                 </Menu.Item>
@@ -120,7 +119,7 @@ const MainLayout = () => {
               <Space>
                 <Progress type="circle" className="circle" percent={75} />
               </Space>
-              <p>Complete Profile</p>
+              <p className="title">Complete Profile</p>
               <p>Let’s empower your financial task today with Findash.</p>
               <span>
                 Dismiss <Link to="">Go to Profile</Link>

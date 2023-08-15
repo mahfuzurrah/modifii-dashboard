@@ -1,19 +1,20 @@
 import React from "react";
-import {
-  BsArrowDown,
-  BsArrowUp,
-  BsInfoCircleFill,
-} from "react-icons/bs";
+import { BsArrowDown, BsArrowUp, BsInfoCircleFill } from "react-icons/bs";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+// import required modules
+import { Navigation } from "swiper/modules";
 
-
-import Shop from "../assets/Icons/shop.svg"
-import Net from "../assets/Icons/net.svg"
-import Document from "../assets/Icons/Document.svg"
-import Swap from "../assets/Icons/ArrowSwap.svg"
-import Money from "../assets/Icons/money.svg"
-import ISquare from "../assets/Icons/InformationSquare.svg"
-import Refresh from "../assets/Icons/Refresh.svg"
-import CSend from "../assets/Icons/card-send.svg"
+import Swap from "../assets/Icons/ArrowSwap.svg";
+import Document from "../assets/Icons/Document.svg";
+import ISquare from "../assets/Icons/InformationSquare.svg";
+import Refresh from "../assets/Icons/Refresh.svg";
+import CSend from "../assets/Icons/card-send.svg";
+import Money from "../assets/Icons/money.svg";
+import Net from "../assets/Icons/net.svg";
+import Shop from "../assets/Icons/shop.svg";
 import Card from "./Card";
 
 const DashboardCard = () => {
@@ -197,19 +198,38 @@ const DashboardCard = () => {
   ];
 
   return (
-    <div className="row">
-      {cardData.map((card, index) => (
-        <div className="col-lg-3 col-md-6 col-sm-12" key={index}>
-          <Card
-            icon={card.icon}
-            title={card.title}
-            valu={card.valu}
-            status={card.status}
-            cName={card.cName}
-          />
+    <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+      <SwiperSlide>
+        <div className="row">
+          {cardData.map((card, index) => (
+            <div className="col-lg-3 col-md-6 col-sm-12" key={index}>
+              <Card
+                icon={card.icon}
+                title={card.title}
+                valu={card.valu}
+                status={card.status}
+                cName={card.cName}
+              />
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="row">
+          {cardData.map((card, index) => (
+            <div className="col-lg-3 col-md-6 col-sm-12" key={index}>
+              <Card
+                icon={card.icon}
+                title={card.title}
+                valu={card.valu}
+                status={card.status}
+                cName={card.cName}
+              />
+            </div>
+          ))}
+        </div>
+      </SwiperSlide>
+    </Swiper>
   );
 };
 
