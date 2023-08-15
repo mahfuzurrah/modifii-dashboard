@@ -54,7 +54,7 @@ function LogIn() {
                 <div className="mb-5">
                   <h1>Sign in to Modifii</h1>
                   <p className="mt-2 desc">
-                    Simple and secure all-in-one management software
+                    <b>Simple and secure all-in-one management software </b>
                   </p>
                 </div>
                 <form action="" className="input_form">

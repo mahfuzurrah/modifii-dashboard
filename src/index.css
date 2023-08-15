@@ -142,16 +142,15 @@ label {
   padding: 4px 14px;
   padding-right: 8px;
   border-radius: 12px;
-
 }
 
 .selector input::placeholder {
-  color: #6F767E;
+  color: #6f767e;
   font-weight: 600;
 }
 
 .selector .css-1dimb5e-singleValue {
-  color: #6F767E;
+  color: #6f767e;
   font-weight: 600;
 }
 
@@ -285,7 +284,7 @@ label {
 
 .logo {
   width: auto;
-  height: 25px;
+  height: 35px;
 }
 
 .section_title {
@@ -361,12 +360,17 @@ All pages css start
 }
 
 .logIn_page .form_area {
-  width: 430px;
+  width: 450px;
   text-align: center;
 }
 
+.logIn_page .form_area h1 {
+  font-size: 40px;
+}
+
 .logIn_page .form_area .desc {
-  font-weight: var(--font-medium);
+  font-weight: #131B28;
+  font-size: 18px;
 }
 
 .logIn_page .form_area .remember_me {
@@ -741,40 +745,40 @@ span.css-1u9des2-indicatorSeparator {
   margin-top: 5px;
 }
 
-.table_area{
+.table_area {
   padding: 24px;
   background: var(--white-color);
   border-radius: 16px;
 }
 
-.table_area .table_header{
+.table_area .table_header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
 }
 
-.table_area .table_header h3{
+.table_area .table_header h3 {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-.table_area .table_header .icons{
+.table_area .table_header .icons {
   color: var(--primary-color);
-  font-size: 25px
+  font-size: 25px;
 }
 
-.table_area .even-row{
-  background: #F4F4F4;
+.table_area .even-row {
+  background: #f4f4f4;
   border-radius: 8px;
 }
 
-.table_area .custom-table{
+.table_area .custom-table {
   background: transparent !important;
 }
 
-.table_area th.ant-table-cell{
+.table_area th.ant-table-cell {
   background: transparent !important;
 }
 
@@ -793,7 +797,6 @@ span.css-1u9des2-indicatorSeparator {
 /* =============== LogIn Page CSS ================= */
 
 @media screen and (max-width: 768px) {
-
   .ant-picker.date_picker,
   .btn_area button.btn_b {
     width: 100% !important;
