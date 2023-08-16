@@ -147,7 +147,7 @@ function Dashboard() {
         <div className="col-lg-6 col-md-12">
           <div className="table_area">
             <div className="table_header">
-              <h3><BiSolidInfoSquare className="icons" /> Sales Payment Due</h3>
+              <h3><BiSolidInfoSquare className="icons" />Sales Payment Due</h3>
               <button className="dot_toggle_btn">
               <BiDotsVerticalRounded className="icons" />
             </button>

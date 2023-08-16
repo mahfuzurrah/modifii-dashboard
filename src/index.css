@@ -139,7 +139,7 @@ label {
 .selector .css-13cymwt-control,
 .selector .css-t3ipsp-control {
   border: 1px solid var(--border-color);
-  padding: 4px 8px !important;
+  padding: 0 8px !important;
   padding-right: 8px;
   border-radius: 12px;
 }
@@ -667,23 +667,26 @@ All pages css start
 
 .chart_box .chart_item .dash_sale_plan {
   padding: 4px;
-  background: #edf2f7;
+  background: #EDF2F7;
   border-radius: 10px;
 }
 
 .chart_box .chart_item .dash_sale_plan .d_btn {
-  padding: 8px 20px;
+  padding: 8px 16px;
+  height: 36px;
   border-radius: 8px;
   border: none;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
-  color: #6f767e;
+  color: #6F767E;
   transition: background-color 0.3s, color 0.3s;
+  font-family: var(--body-font);
+  background: transparent !important;
 }
 
 .chart_box .chart_item .dash_sale_plan .d_btn.active {
-  background: #1a202c;
-  color: var(--white-color);
+  background: #1a202c !important;
+  color: var(--white-color) !important;
   transition: all 0.5s ease-in-out;
 }
 
@@ -694,10 +697,14 @@ All pages css start
   margin-bottom: 32px;
 }
 
+.chart_box .chart_item .items.left {
+  gap: 56px;
+}
+
 .chart_box .chart_item .items {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 24px;
 }
 
 .chart_box .chart_item .items h3 {
@@ -727,6 +734,10 @@ All pages css start
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.css-13cymwt-control {
+  height: 40px;
 }
 
 .dot_toggle_btn .icons {
