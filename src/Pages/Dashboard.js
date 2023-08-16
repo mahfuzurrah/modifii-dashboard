@@ -1,12 +1,11 @@
 import { DatePicker } from "antd";
 import React, { useState } from "react";
 import {
-  BiChevronLeft,
-  BiChevronRight,
   BiDotsVerticalRounded,
   BiSolidInfoSquare,
 } from "react-icons/bi";
 import { BsArrowUp } from "react-icons/bs";
+import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { PiPencilSimpleBold } from "react-icons/pi";
 import DashboardCard from "../Components/Cards/DashboardCard";
 import DashboardSalesChart from "../Components/Chart/DashboardSalesChart";
@@ -135,10 +134,10 @@ function Dashboard() {
           </div>
           <div className="chart_right_content">
             <button className="slide_btn">
-              <BiChevronLeft className="icons" />
+              <MdOutlineKeyboardArrowLeft className="icons" />
             </button>
             <button className="slide_btn">
-              <BiChevronRight className="icons" />
+              <MdOutlineKeyboardArrowRight className="icons" />
             </button>
           </div>
         </div>
