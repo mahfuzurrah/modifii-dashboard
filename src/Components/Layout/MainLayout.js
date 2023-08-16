@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { Button, Layout, Menu, Progress, Space } from "antd";
 import { BiMenu, BiX } from "react-icons/bi";
+import { TbLayoutGridAdd } from "react-icons/tb";
 import { FiBarChart, FiChevronDown, FiSettings, FiUsers } from "react-icons/fi";
 import { HiOutlineDownload, HiOutlineUser } from "react-icons/hi";
 import Search from "../InputField/Search";
@@ -29,7 +30,7 @@ const MainLayout = () => {
     },
     {
       key: "products",
-      icon: <FiBarChart />,
+      icon: <TbLayoutGridAdd />,
       label: "Products",
     },
     {

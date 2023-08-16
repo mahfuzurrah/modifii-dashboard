@@ -236,17 +236,15 @@ label {
   background: #101828;
   padding: 12px 16px;
   color: var(--white-color);
-  width: fit-content;
   border-radius: 8px;
   font-family: var(--body-font);
   font-size: var(--small-font-size);
-  font-weight: var(--font-medium);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
   font-weight: var(--font-bold);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
 }
 
 .btn_b .icons {
@@ -260,6 +258,7 @@ label {
 .btn_b:hover {
   background: var(--secondary-color);
   color: var(--white-color);
+  transition: all 0.3s ease-in-out;
 }
 
 .btn_s:hover,
