@@ -1,9 +1,9 @@
+import React, { useState, useEffect } from "react";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { Button, Layout, Menu, Progress, Space } from "antd";
-import React, { useState } from "react";
 import { BiMenu, BiX } from "react-icons/bi";
 import { FiBarChart, FiChevronDown, FiSettings, FiUsers } from "react-icons/fi";
 import { HiOutlineDownload, HiOutlineUser } from "react-icons/hi";
-import { Link, Outlet, useNavigate } from "react-router-dom";
 import Search from "../InputField/Search";
 import Logo from "../assets/Icons/Logo.svg";
 import UserImg from "../assets/Images/Avatar/user.png";
@@ -14,6 +14,7 @@ const { Header, Sider, Content } = Layout;
 
 const MainLayout = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const mainMenuItems = [
     {
@@ -61,6 +62,11 @@ const MainLayout = () => {
 
   const [toggleBar, setToggleBar] = useState(false);
   const [activeItem, setActiveItem] = useState(false);
+
+  useEffect(() => {
+    const currentPath = location.pathname.split("/")[1];
+    setActiveItem(currentPath || "dashboard");
+  }, [location.pathname]);
 
   const handleMenuItemClick = (itemKey) => {
     setActiveItem(itemKey);

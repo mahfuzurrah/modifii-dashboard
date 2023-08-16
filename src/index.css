@@ -686,6 +686,9 @@ All pages css start
   padding: 4px;
   background: #EDF2F7;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .chart_box .chart_item .dash_sale_plan .d_btn {
