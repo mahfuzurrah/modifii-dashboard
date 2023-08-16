@@ -139,7 +139,7 @@ label {
 .selector .css-13cymwt-control,
 .selector .css-t3ipsp-control {
   border: 1px solid var(--border-color);
-  padding: 4px 14px;
+  padding: 4px 8px !important;
   padding-right: 8px;
   border-radius: 12px;
 }
@@ -426,7 +426,7 @@ All pages css start
 }
 
 .logIn_page .login_form .lang_selector .selector .css-1fdsijx-ValueContainer {
-  padding-left: 40px;
+  padding-left: 24px;
   border-radius: 8px;
 }
 
@@ -465,9 +465,9 @@ All pages css start
   margin: auto;
 }
 
-.css-hlgwow {
+/* .css-hlgwow {
   padding-left: 40px !important;
-}
+} */
 
 /* =====================Dashboard====================== */
 .dashboard_page .date_picker {
