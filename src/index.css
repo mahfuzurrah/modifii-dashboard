@@ -40,7 +40,7 @@
 }
 
 body {
-  font-family: var(--title-font);
+  font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--title-color);
   background: #fafafa;
@@ -55,23 +55,23 @@ ul {
 
 h1 {
   font-size: var(--h1-font-size);
-  font-family: var(--title-font);
+  font-family: var(--body-font);
   color: var(--title-color);
-  font-weight: var(--font-ex-bold);
+  font-weight: var(--font-bold);
 }
 
 h2 {
   font-size: var(--h2-font-size);
-  font-family: var(--title-font);
+  font-family: var(--body-font);
   color: var(--title-color);
-  font-weight: var(--font-ex-bold);
+  font-weight: var(--font-bold);
 }
 
 h3 {
   font-size: var(--h3-font-size);
-  font-family: var(--title-font);
+  font-family: var(--body-font);
   color: var(--title-color);
-  font-weight: var(--font-ex-bold);
+  font-weight: var(--font-bold);
 }
 
 p {
@@ -481,7 +481,7 @@ All pages css start
 .dashboard_page .section_title .text_area h1 {
   font-size: 30px;
   font-family: var(--body-font);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .ant-picker-input input {
@@ -510,6 +510,11 @@ All pages css start
   border-radius: 12px;
   background: #b5e4ca40;
   padding: 16px;
+}
+
+.dashboard_page .all_card_group .card h1{
+ font-family: var(--title-font);
+ font-weight: 800;
 }
 
 .dashboard_page .all_card_group .card .card_icons {
@@ -634,6 +639,18 @@ All pages css start
   width: 100%;
   gap: 20px;
   margin-bottom: 24px;
+}
+
+.chart_box .text_area h1{
+  margin-bottom: 4px;
+  font-weight: 700;
+  color: #272B30;
+}
+
+.chart_box .status span{
+  color: #83BF6E;
+  background: #EAFAE5;
+  padding: 4px;
 }
 
 .chart_box .chart_right_content {

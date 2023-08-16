@@ -4,15 +4,14 @@ import {
   BiChevronLeft,
   BiChevronRight,
   BiDotsVerticalRounded,
-  BiSolidInfoSquare
+  BiSolidInfoSquare,
 } from "react-icons/bi";
+import { BsArrowUp } from "react-icons/bs";
 import { PiPencilSimpleBold } from "react-icons/pi";
 import DashboardCard from "../Components/Cards/DashboardCard";
 import DashboardSalesChart from "../Components/Chart/DashboardSalesChart";
 import Selector from "../Components/Selector/Selector";
 import SalesPaymentDueTable from "../Components/Table/SalesPaymentDueTable";
-
-
 
 function Dashboard() {
   const onChange = (date, dateString) => {
@@ -128,7 +127,10 @@ function Dashboard() {
           <div className="text_area">
             <h1>1,509 orders</h1>
             <p className="status">
-              <span>37.8%</span> vs. Sep, 2021
+              <span>
+                <BsArrowUp /> 37.8%
+              </span>{" "}
+              vs. Sep, 2021
             </p>
           </div>
           <div className="chart_right_content">
@@ -147,23 +149,28 @@ function Dashboard() {
         <div className="col-lg-6 col-md-12">
           <div className="table_area">
             <div className="table_header">
-              <h3><BiSolidInfoSquare className="icons" />Sales Payment Due</h3>
+              <h3>
+                <BiSolidInfoSquare className="icons" />
+                Sales Payment Due
+              </h3>
               <button className="dot_toggle_btn">
-              <BiDotsVerticalRounded className="icons" />
-            </button>
+                <BiDotsVerticalRounded className="icons" />
+              </button>
             </div>
-          <SalesPaymentDueTable/>
+            <SalesPaymentDueTable />
           </div>
         </div>
         <div className="col-lg-6 col-md-12">
           <div className="table_area">
             <div className="table_header">
-              <h3><BiSolidInfoSquare className="icons" /> Purchase Payment Due</h3>
+              <h3>
+                <BiSolidInfoSquare className="icons" /> Purchase Payment Due
+              </h3>
               <button className="dot_toggle_btn">
-              <BiDotsVerticalRounded className="icons" />
-            </button>
+                <BiDotsVerticalRounded className="icons" />
+              </button>
             </div>
-          <SalesPaymentDueTable/>
+            <SalesPaymentDueTable />
           </div>
         </div>
       </div>
