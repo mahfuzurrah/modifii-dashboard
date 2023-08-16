@@ -354,7 +354,7 @@ All pages css start
 }
 
 .logIn_page .form_area {
-  width: 450px;
+  max-width: 500px;
   text-align: center;
 }
 
@@ -363,8 +363,8 @@ All pages css start
 }
 
 .logIn_page .form_area .desc {
-  font-weight: #131B28;
   font-size: 18px;
+  color: #131b28;
 }
 
 .logIn_page .form_area .remember_me {
@@ -506,9 +506,9 @@ All pages css start
   padding: 16px;
 }
 
-.dashboard_page .all_card_group .card h1{
- font-family: var(--title-font);
- font-weight: 800;
+.dashboard_page .all_card_group .card h1 {
+  font-family: var(--title-font);
+  font-weight: 800;
 }
 
 .dashboard_page .all_card_group .card .card_icons {
@@ -635,15 +635,15 @@ All pages css start
   margin-bottom: 24px;
 }
 
-.chart_box .text_area h1{
+.chart_box .text_area h1 {
   margin-bottom: 4px;
   font-weight: 700;
-  color: #272B30;
+  color: #272b30;
 }
 
-.chart_box .status span{
-  color: #83BF6E;
-  background: #EAFAE5;
+.chart_box .status span {
+  color: #83bf6e;
+  background: #eafae5;
   padding: 4px;
 }
 
@@ -678,7 +678,7 @@ All pages css start
 
 .chart_box .chart_item .dash_sale_plan {
   padding: 4px;
-  background: #EDF2F7;
+  background: #edf2f7;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -692,7 +692,7 @@ All pages css start
   border: none;
   font-size: 15px;
   font-weight: 500;
-  color: #6F767E;
+  color: #6f767e;
   transition: background-color 0.3s, color 0.3s;
   font-family: var(--body-font);
   background: transparent !important;
@@ -820,6 +820,20 @@ span.css-1u9des2-indicatorSeparator {
 /* =============== LogIn Page CSS ================= */
 /* =============== LogIn Page CSS ================= */
 /* =============== LogIn Page CSS ================= */
+
+@media screen and (max-width: 991px) {
+  .logIn_page {
+    height: 100vh;
+  }
+
+  .logIn_page .login_form {
+    height: 95vh;
+  }
+
+  .logIn_page .login_img {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .ant-picker.date_picker,
